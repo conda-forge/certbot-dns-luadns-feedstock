@@ -1,13 +1,12 @@
 context:
-  name: certbot-dns-luadns
   version: "5.8.0"
 
 package:
-  name: ${{ name|lower }}
+  name: certbot-dns-luadns
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/c/certbot-dns-luadns/certbot_dns_luadns-${{ version }}.tar.gz
   sha256: e7aeb723c824c1c3685dbfceb63fa7ed5344e99ed3060058de2d4e953b3310a4
 
 build:
@@ -31,7 +30,9 @@ tests:
       imports:
         - certbot_dns_luadns
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://certbot.eff.org
