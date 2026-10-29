@@ -1,5 +1,5 @@
 context:
-  version: "5.8.0"
+  version: "5.9.0"
 
 package:
   name: certbot-dns-luadns
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/c/certbot-dns-luadns/certbot_dns_luadns-${{ version }}.tar.gz
-  sha256: e7aeb723c824c1c3685dbfceb63fa7ed5344e99ed3060058de2d4e953b3310a4
+  sha256: b7971999481e013663e625cd12250cfeb01b045c2ffd82f31110431c038dbd56
 
 build:
   noarch: python
